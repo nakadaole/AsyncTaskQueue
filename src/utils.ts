@@ -32,3 +32,6 @@ export const delRedisKey = (key: string) => {
         }
     });
 }
+
+export const TASK_NAME: string = "localTask1"
+export const TASK_AMOUNT: number = 20
