@@ -33,5 +33,7 @@ export const delRedisKey = (key: string) => {
     });
 }
 
+export const popTask = () => new Promise(resolve => client.blpop(TASK_NAME, 1000, (err, reply) => resolve(reply[1])));
+
 export const TASK_NAME: string = "localTask1"
 export const TASK_AMOUNT: number = 20
